@@ -1,0 +1,10 @@
+---
+- name: Install Apache HTTP Server
+  hosts: your_target_hosts
+  become: yes  # This allows Ansible to escalate privileges to sudo
+
+  tasks:
+    - name: Install httpd package
+      package:
+        name: httpd  # Name of the package to install
+        state: present  # Ensure that the package is present (installed)
